@@ -1,0 +1,25 @@
+{
+  "name": "ichat-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "API local para usuarios y conversaciones de iChat",
+  "engines": { "node": ">=24.15.0" },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "check": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/server.js",
+    "test": "tsx --test tests/*.test.ts",
+    "test:smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
